@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Healthcare Support App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Mini Healthcare Support</h1>
+        <p>Patient Support | Volunteer Registration | Contact</p>
+    </header>
+
+    <nav>
+        <button onclick="showTab('patient')">Patient Support</button>
+        <button onclick="showTab('volunteer')">Volunteer Register</button>
+        <button onclick="showTab('contact')">Contact Us</button>
+        <button onclick="showTab('chatbot')">AI Chatbot</button>
+    </nav>
+
+    <main>
+        <!-- Patient Support Form -->
+        <div id="patient" class="tab-content">
+            <h2>Patient Support Form</h2>
+            <form id="patientForm">
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email" required>
+                <input type="tel" placeholder="Phone">
+                <input type="date" placeholder="Date of Birth">
+                <textarea placeholder="Describe your issue (e.g., symptoms)"></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+
+        <!-- Volunteer Registration Form -->
+        <div id="volunteer" class="tab-content" style="display:none;">
+            <h2>Volunteer Registration</h2>
+            <form id="volunteerForm">
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email" required>
+                <input type="tel" placeholder="Phone" required>
+                <select required>
+                    <option value="">Skills (e.g., Nursing, Driving)</option>
+                    <option>Nursing</option>
+                    <option>Admin</option>
+                    <option>Driver</option>
+                </select>
+                <input type="date" id="availability">
+                <button type="submit">Register</button>
+            </form>
+        </div>
+
+        <!-- Contact Form -->
+        <div id="contact" class="tab-content" style="display:none;">
+            <h2>Contact Form</h2>
+            <form id="contactForm">
+                <input type="text" placeholder="Name" required>
+                <input type="email" placeholder="Email" required>
+                <input type="text" placeholder="Subject">
+                <textarea placeholder="Message"></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+
+        <!-- AI Chatbot Concept -->
+        <div id="chatbot" class="tab-content" style="display:none;">
+            <h2>Healthcare FAQ Chatbot</h2>
+            <div id="chatBox"></div>
+            <input type="text" id="userInput" placeholder="Ask FAQ e.g., 'fever symptoms'">
+            <button onclick="sendMessage()">Send</button>
+            <p><em>AI Idea: Matches queries to responses; extend with free OpenAI API key for real AI.</em></p>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
