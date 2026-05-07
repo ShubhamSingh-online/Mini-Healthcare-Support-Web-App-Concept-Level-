@@ -46,5 +46,5 @@ text
 - Trust-building gradients/shadows
 - Medical icons + Poppins font
 
-Was exicited building it.
 Help of Ai was taken to make this.
+Was very excited while building this for the project.
